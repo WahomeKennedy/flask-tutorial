@@ -10,7 +10,7 @@ def get_db():
             detect_types=sqlite3.PARSE_DECLTYPES
         )
         g.db.row_factory = sqlite3.Row
-
+        #g is a special object that is unique for each request
     return g.db
 
 def close_db(e=None):
